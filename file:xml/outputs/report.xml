@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <record id="1001">
+    <date>2013-07-29T00:00:00+05:30</date>
+    <qty>980</qty>
+    <sales>213.100</sales>
+    <staffName>Walking Techie</staffName>
+  </record>
+  <record id="1002">
+    <date>2013-07-30T00:00:00+05:30</date>
+    <qty>1080</qty>
+    <sales>320.200</sales>
+    <staffName>Walking Techie 1</staffName>
+  </record>
+  <record id="1003">
+    <date>2013-07-31T00:00:00+05:30</date>
+    <qty>1200</qty>
+    <sales>342.197</sales>
+    <staffName>Walking Techie 2</staffName>
+  </record>
+</report>
