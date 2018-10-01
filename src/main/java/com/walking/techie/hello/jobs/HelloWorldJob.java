@@ -5,6 +5,7 @@ import com.walking.techie.hello.model.Report;
 import com.walking.techie.hello.processor.CustomItemProcessor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
+import org.springframework.batch.core.configuration.annotation.DefaultBatchConfigurer;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
@@ -22,7 +23,7 @@ import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 
 @Configuration
 @EnableBatchProcessing
-public class HelloWorldJob {
+public class HelloWorldJob extends DefaultBatchConfigurer {
 
   @Autowired
   private JobBuilderFactory jobBuilderFactory;
@@ -50,7 +51,7 @@ public class HelloWorldJob {
     return new CustomItemProcessor();
   }
 
-  @Bean
+  @Bean(destroyMethod = "")
   public StaxEventItemWriter<Report> writer() {
     StaxEventItemWriter<Report> writer = new StaxEventItemWriter<>();
     writer.setResource(new FileSystemResource("file:xml/outputs/report.xml"));
