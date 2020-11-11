@@ -5,3 +5,5 @@ Tasklet (single task/operation), It is used to do clean up resources after or be
 
 A job is sequence of steps.
 Find more datail on https://walkingtechie.blogspot.com/2017/03/spring-batch-hello-world-example.html
+
+This projected is updated to the latest version of spring boot to 2.3.5.RELEASE.
